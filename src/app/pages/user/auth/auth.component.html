@@ -1,0 +1,29 @@
+<div class="login-container">
+  <div class="login-section">
+    <h2>Sign in</h2>
+
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <label for="phoneNumber">Phone number</label>
+        <input id="phoneNumber" type="text" formControlName="phoneNumber" placeholder="Enter your phone number" />
+        <div *ngIf="authForm.get('phoneNumber')?.invalid && authForm.get('phoneNumber')?.touched" class="error-message">
+          Enter correct phone number.
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" placeholder="Enter your password" />
+        <div *ngIf="authForm.get('password')?.invalid && authForm.get('password')?.touched" class="error-message">
+          Minimal password length — 6 symbols.
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="isLoading || authForm.invalid">Sign in</button>
+
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </form>
+
+    <p>Don't have an account? <a routerLink="/register">Register</a></p>
+  </div>
+</div>

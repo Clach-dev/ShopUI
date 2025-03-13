@@ -1,0 +1,109 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #f6a700, #c46d15);
+  font-family: 'Poppins', sans-serif;
+
+  .login-section {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 40px 60px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+
+        label {
+          color: white;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+
+        input {
+          background: transparent;
+          border: 2px solid #ffffff50;
+          padding: 12px 15px;
+          border-radius: 8px;
+          color: white;
+          font-size: 1rem;
+          outline: none;
+          width: 100%;
+
+          &::placeholder {
+            color: #ffffff80;
+          }
+
+          &:focus {
+            border-color: #f6a700;
+          }
+        }
+
+        .error-message {
+          color: red;
+          font-size: 0.9rem;
+          margin-top: 5px;
+        }
+      }
+
+      button {
+        background: #f6a700;
+        border: none;
+        padding: 12px;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.3s;
+
+        &:hover {
+          background: #e69500;
+        }
+
+        &:disabled {
+          background: #444;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      color: white;
+      text-align: center;
+
+      a {
+        color: #ffd700;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
