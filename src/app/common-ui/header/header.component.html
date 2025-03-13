@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="logo">
+    <img src="/logo.png" alt="CHOP-CHOP" />
+      <span class="logo-text">Интернет-магазин чего-нибудь</span>
+  </div>
+
+  <div class="nav">
+    <div class="catalog">
+      <button class="nav-button" (click)="toggleCategories()">Каталог</button>
+      <ul *ngIf="showCategories" class="category-list">
+        <li>Фрукты</li>
+        <li>Овощи</li>
+        <li>Выпечка</li>
+      </ul>
+    </div>
+
+    <div class="search">
+      <input
+        type="text"
+        placeholder="Поиск по наименованию или артикулу"
+        [(ngModel)]="searchQuery"
+        (focus)="hidePlaceholder = true"
+        (blur)="hidePlaceholder = !searchQuery"
+      />
+      <button class="search-button">Найти</button>
+    </div>
+
+    <div class="auth">
+      <a href="#" class="link">Войти</a>
+      <span class="separator">|</span>
+      <a href="#" class="link">В корзине: 0 товаров</a>
+    </div>
+  </div>
+</header>

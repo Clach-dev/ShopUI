@@ -1,0 +1,121 @@
+.scroll-product {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 250px;
+  margin-left: 300px;
+  overflow: hidden;
+  background-color: #d3eafd;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.product-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.product {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%; /* Растягиваем элемент по высоте */
+  padding: 0 20px;
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.product.active {
+  opacity: 1;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0 50px 50px;
+}
+
+p {
+  font-size: 22px;
+  color: #ff8c00;
+  margin: 0 50px 10px;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+
+.buy-button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin: 15px 50px 10px;
+}
+
+.buy-button:hover {
+  background-color: #e67e00;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #303030;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.nav-button.left {
+  left: 10px;
+}
+
+.nav-button.right {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: #505050;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicators span {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicators span.active {
+  background-color: #000;
+}
