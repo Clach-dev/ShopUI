@@ -1,0 +1,29 @@
+<div class="register-container">
+  <div class="left-section">
+    <h1>Welcome. We Are Glad To See You.</h1>
+  </div>
+
+  <div class="right-section">
+    <h2>Create Account</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <input type="tel" placeholder="Phone Number" formControlName="phoneNumber">
+        <input type="password" placeholder="Password" formControlName="password">
+      </div>
+
+      <div class="input-group">
+        <input type="text" placeholder="Last Name" formControlName="lastName">
+        <input type="text" placeholder="First Name" formControlName="firstName">
+      </div>
+
+      <input type="text" placeholder="Middle Name" formControlName="middleName">
+      <input type="date" formControlName="birthDate">
+      <input type="email" placeholder="Email" formControlName="email">
+
+      <button type="submit" [disabled]="registerForm.invalid">Create Account</button>
+    </form>
+
+    <p>Already have an account? <a routerLink="/auth">Login</a></p>
+  </div>
+</div>
