@@ -1,0 +1,21 @@
+<div class="scroll-category">
+  <button class="scroll-btn left" (click)="prev()">&#10094;</button>
+
+  <div class="category-wrapper">
+    <div
+      class="category-card"
+      *ngFor="let category of getVisibleCategories(); let i = index"
+    >
+      <div class="category-content">
+        <div class="text-content">
+          <h2>{{ category.title }}</h2>
+          <p>{{ category.description }}</p>
+          <a [routerLink]="category.link" class="category-button">Перейти</a>
+        </div>
+        <img [src]="category.imageUrl" alt="{{ category.title }}" />
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-btn right" (click)="next()">&#10095;</button>
+</div>

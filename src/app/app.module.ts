@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import { BuyButtonComponent } from './common-ui/buy-button/buy-button.component';
 import { ScrollProductComponent } from './common-ui/scroll-product/scroll-product.component';
 import { ProductCardComponent } from './common-ui/product-card/product-card.component';
+import { ScrollCategoryComponent } from './common-ui/scroll-category/scroll-category.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductCardComponent } from './common-ui/product-card/product-card.comp
     HeaderComponent,
     BuyButtonComponent,
     ScrollProductComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ScrollCategoryComponent
   ],
     imports: [
         BrowserModule,
